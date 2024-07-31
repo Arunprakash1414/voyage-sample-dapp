@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import { Card, Button, Input, Tabs } from "antd";
+import { Card, Button, Input } from "antd";
 import { JSONTree } from 'react-json-tree';
 
 function App() {
@@ -65,9 +65,9 @@ function App() {
     }
   }
 
-  const onChange = (key) => {
-    console.log(key);
-  };
+  // const onChange = (key) => {
+  //   console.log(key);
+  // };
 
   const handleUploadManifest = e => {
     const fileReader = new FileReader();
@@ -98,18 +98,18 @@ function App() {
     )
   }
 
-  const items = [
-    {
-      key: '1',
-      label: 'Deploy',
-      children: <DeployLogic />,
-    },
-    {
-      key: '2',
-      label: 'Invoke',
-      children: <InvokeLogic />,
-    },
-  ];
+  // const items = [
+  //   {
+  //     key: '1',
+  //     label: 'Deploy',
+  //     children: <DeployLogic />,
+  //   },
+  //   {
+  //     key: '2',
+  //     label: 'Invoke',
+  //     children: <InvokeLogic />,
+  //   },
+  // ];
 
 
 

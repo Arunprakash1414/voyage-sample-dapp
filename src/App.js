@@ -9,9 +9,9 @@ function App() {
   const [signMessage, setSignMessage] = useState('');
   const [signMessageLoader, setSignMessageLoader] = useState(false);
   const [signMessageSignature, setSignMessageSignature] = useState('');
-  const [toAddress, setToAddress] = useState('0xe4b9fa19a8846bf275559aa52f3253f7cd265e553fdeac2684cbd300a5dde799');
-  const [sendAmount, setSendAmount] = useState(111);
-  const [sendAssetID, setSendAssetID] = useState('0x000000004cd973c4eb83cdb8870c0de209736270491b7acc99873da1eddced5826c3b548');
+  const [toAddress, setToAddress] = useState('');
+  const [sendAmount, setSendAmount] = useState(0);
+  const [sendAssetID, setSendAssetID] = useState('');
   const [sendInteractionLoader, setSendInteractionLoader] = useState(false);
 
   const [assetTransferResponse, setAssetTransferResponse] = useState('');

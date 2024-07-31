@@ -53,7 +53,7 @@ function App() {
         toAddress: toAddress
       }
       setSendInteractionLoader(true);
-      const sendIxResponse = await window.moi.asset.transfer(payload);
+      const sendIxResponse = await window.moi.asset.send(payload);
       console.log("sendIxResponse : ", sendIxResponse);
       setAssetTransferResponse(sendIxResponse);
       setSendInteractionLoader(false);

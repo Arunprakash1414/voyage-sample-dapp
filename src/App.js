@@ -79,24 +79,24 @@ function App() {
   };
 
 
-  const DeployLogic = () => {
-    return (
-      <div>
-        <p className='font-bold text-lg mb-4'>Upload Manifest</p>
-        <input type="file" onChange={handleUploadManifest}
-          accept="application/json"
-        />
-      </div>
-    )
-  }
+  // const DeployLogic = () => {
+  //   return (
+  //     <div>
+  //       <p className='font-bold text-lg mb-4'>Upload Manifest</p>
+  //       <input type="file" onChange={handleUploadManifest}
+  //         accept="application/json"
+  //       />
+  //     </div>
+  //   )
+  // }
 
-  const InvokeLogic = () => {
-    return (
-      <div>
+  // const InvokeLogic = () => {
+  //   return (
+  //     <div>
 
-      </div>
-    )
-  }
+  //     </div>
+  //   )
+  // }
 
   // const items = [
   //   {

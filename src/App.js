@@ -203,11 +203,11 @@ function App() {
 
             </Card>
 
-            <Card title="Logic call">
+            {/* <Card title="Logic call">
 
               <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
 
-            </Card>
+            </Card> */}
 
           </div>}
         </div>

@@ -20,9 +20,6 @@ importers:
       antd:
         specifier: ^5.19.3
         version: 5.20.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      js-moi-sdk:
-        specifier: link:../../sarvalabs-github/js-moi-sdk
-        version: link:../../sarvalabs-github/js-moi-sdk
       react:
         specifier: ^18.3.1
         version: 18.3.1

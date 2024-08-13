@@ -44,9 +44,16 @@ const AssetCreate = ({ signer }) => {
 
         }
         catch (err) {
-            console.log(err)
+            if (err?.message?.includes("terminated premature")) {
+                message.error(
+                    "user rejected the request"
+                );
+
+            } else {
+                message.error(err.message);
+
+            }
             setLoader(false);
-            message.error(err.message);
         }
     }
 

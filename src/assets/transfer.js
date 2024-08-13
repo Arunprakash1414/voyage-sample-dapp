@@ -46,9 +46,17 @@ const AssetTransfer = ({ signer }) => {
 
         }
         catch (err) {
-            console.log(err)
+
             setLoader(false);
-            message.error(err.message);
+            if (err?.message?.includes("terminated premature")) {
+                message.error(
+                    "user rejected the request"
+                );
+
+            } else {
+                message.error(err.message);
+
+            }
         }
     }
 

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import { Card, Button, Input } from "antd";
+import { Card, Button, Input, message } from "antd";
 import Assets from './assets';
 
 function App() {
@@ -14,16 +14,20 @@ function App() {
 
   const handleConnect = async () => {
     try {
-      setConnecting(true);
+      // setConnecting(true);
       const conn = await window.moi.currentAccount();
-      if (conn.message?.address) {
+      if (!conn?.message?.address) {
+        message.error(conn?.message)
+        return;
+      }
+      else {
         setAccount(conn.message);
 
         const _signer = window.moi.getSigner()
         setSigner(_signer);
 
       }
-      setConnecting(false)
+      // setConnecting(false)
     }
     catch (err) {
       console.log(err);
@@ -36,9 +40,14 @@ function App() {
       const signer = await window.moi.getSigner();
       const signResponse = await signer.sign(signMessage);
       console.log("sign response : ", signResponse);
+
+
       if (signResponse?.signature) {
         console.log(signResponse.signature)
         setSignMessageSignature(signResponse.signature)
+      }
+      else if (signResponse?.message) {
+        message.error(signResponse?.message)
       }
       setSignMessageLoader(false);
     }
